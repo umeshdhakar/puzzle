@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>Puzzle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="board">
+        <div class="countdown">
+            <div id="t" class="badge">00:00</div>
+        </div>
+        <div class="frame">
+            <span id=""><img src="images/7.png"></span>
+            <span id=""><img src="images/3.png"></span>
+            <span id=""><img src="images/1.png"></span>
+            <span id=""><img src="images/8.png"></span>
+            <span id=""><img src="images/2.png"></span>
+            <span id=""><img src="images/5.png"></span>
+            <span id=""><img src="images/6.png"></span>
+            <span id=""><img src="images/4.png"></span>
+            <span id=""><img src="images/0.png"></span>
+        </div>
+        <div class="sampleFrame" style="display:none">
+            <span id=""><img src="images/1.png"></span>
+            <span id=""><img src="images/2.png"></span>
+            <span id=""><img src="images/3.png"></span>
+            <br>
+            <span id=""><img src="images/8.png"></span>
+            <span id=""><img src="images/0.png"></span>
+            <span id=""><img src="images/4.png"></span>
+            <br>
+            <span id=""><img src="images/7.png"></span>
+            <span id=""><img src="images/6.png"></span>
+            <span id=""><img src="images/5.png"></span>
+        </div>
+        <div class="counter">Moves:
+            <span class="hits">0</span>.
+            <br>
+            <div class="btn btn-info showSample">Show Goal State</div>
+            <a href="" class="btn btn-info">Restart Game</a>
+            <br> developer: umesh
+        </div>
+    </div>
+    <audio id="play">
+        <source src="sounds/audio.mp3" type="audio/mpeg">
+    </audio>
+    <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js'></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="js/timer.jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.frame').click(function() {
+                $("#t").timer({
+                    action: 'start',
+                    seconds: 0
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
